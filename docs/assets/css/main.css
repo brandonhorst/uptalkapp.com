@@ -219,23 +219,20 @@ h6 a {
 h1 {
   font-size: 2.15em;
   letter-spacing: 0.05em;
-  margin: 0 0 0.75em 0;
+  margin: 0 0 0.25em 0;
   font-weight: 800;
   font-family: ui-rounded, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
 }
 
 html {
-  background: #f5f8fb;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  min-height: 100vh;
 }
 
 body {
-  padding: 3em;
-}
-
-header {
-  text-align: center;
-
+  padding: 0.25em;
+  margin: 1em auto;
 }
 
 .downloads,
@@ -244,6 +241,288 @@ header {
 }
 
 .appicon {
-  width: 256px;
-  height: 256px;
+  width: 120px;
+  height: 120px;
+  border-radius: 26px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  margin-bottom: 0.25em;
+}
+
+.appicon:hover {
+  transform: scale(1.05);
+}
+
+.subtitle {
+  font-size: 1.3em;
+  color: #666;
+  font-weight: 600;
+  margin: 0.1em 0 0.15em;
+  letter-spacing: 0.02em;
+}
+
+
+.downloads {
+  margin: 0.25em 0 0.5em;
+}
+
+.downloads .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.downloads img {
+  height: 48px;
+}
+
+.description {
+  background: white;
+  padding: 1em;
+}
+
+.description .content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.description p {
+  margin-bottom: 0.75em;
+  line-height: 1.5;
+}
+
+.description p:last-child {
+  margin-bottom: 0;
+}
+
+.links {
+  text-align: center;
+  margin-top: 0.75em;
+  padding: 0.5em 0;
+}
+
+.links a {
+  color: #CB30E0;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 0.5em;
+}
+
+.links a:hover {
+  color: #A525B8;
+  text-decoration: underline;
+}
+
+#wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.info {
+  background: white;
+  padding: 3em;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 2em 0;
+}
+
+.info h1:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #CB30E0, #A525B8);
+  border-radius: 2px;
+}
+
+.info p {
+  line-height: 1.7;
+  margin-bottom: 1.5em;
+  text-align: left;
+}
+
+.info a {
+  color: #CB30E0;
+  font-weight: 500;
+}
+
+.info a:hover {
+  color: #A525B8;
+  text-decoration: underline;
+}
+
+/* Press Kit Styles */
+.press-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.press-content h2 {
+  font-size: 1.75em;
+  margin-top: 3em;
+  margin-bottom: 1.5em;
+  color: #CB30E0;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.5em;
+}
+
+.press-content h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #CB30E0, #A525B8);
+  border-radius: 2px;
+}
+
+.screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2em;
+  margin: 3em 0;
+}
+
+.screenshot {
+  text-align: center;
+}
+
+.screenshot img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.app-info {
+  background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
+  padding: 3em;
+  border-radius: 20px;
+  margin: 3em 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.app-info p {
+  line-height: 1.7;
+  margin-bottom: 1.2em;
+}
+
+.download-assets {
+  margin: 2em 0;
+}
+
+.download-assets a {
+  display: inline-block;
+  margin: 0.5em 1em 0.5em 0;
+  padding: 0.75em 1.5em;
+  background: linear-gradient(135deg, #CB30E0 0%, #A525B8 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.download-assets a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #A525B8 0%, #8B1F9B 100%);
+}
+
+.back-link {
+  text-align: center;
+  margin: 4em 0 2em;
+}
+
+.back-link a {
+  color: #CB30E0;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  border: 2px solid #CB30E0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.back-link a:hover {
+  background: #CB30E0;
+  color: white;
+}
+
+.press-content ul {
+  line-height: 1.8;
+  margin-left: 1.5em;
+}
+
+.press-content ul li {
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+.press-content ul li::marker {
+  color: #CB30E0;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0.5em;
+  }
+
+  .appicon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .description {
+    padding: 0.75em;
+  }
+
+  .downloads img {
+    height: 50px;
+  }
+
+  #wrapper {
+    padding: 1em;
+  }
+
+  .info {
+    padding: 2em;
+  }
+
+  .screenshots {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+
+  .app-info {
+    padding: 2em;
+  }
+
+  .press-content h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .screenshots {
+    grid-template-columns: 1fr;
+  }
 }
